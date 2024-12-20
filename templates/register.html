@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>Register</title>
+    {% endblock %}
+    {% block style %}
+        {{ bootstrap.load_css() }}
+        <link rel="stylesheet" href="{{ url_for('static', filename='register/register.css') }}">
+    {% endblock %}
+    {% from 'bootstrap5/form.html' import render_field %}
+</head>
+<body>
+    <form action="{{ url_for('register') }}" method="post">
+        {{ form.csrf_token }}
+        <div id="left">
+            <img src="{{ url_for('static', filename='register/images/landscape_01.jpg') }}" alt="register as new user">
+        </div>
+        <div id="right">
+            <p>Sign Up</p>
+            <div>
+                {{ render_field(form.full_name, form_type='inline') }}
+            </div>
+            <div>
+                {{ render_field(form.email, form_type='inline') }}
+            </div>
+            <div>
+                {{ render_field(form.password, form_type='inline') }}
+            </div>
+            <div>
+                {{ render_field(form.agreement) }}
+            </div>
+            <div>
+                {{ render_field(form.register) }}
+                <a href="{{ url_for('login') }}">Sign In -></a>
+            </div>
+        </div>
+        
+    </form>
+    
+    {{ bootstrap.load_js() }}
+</body>
+</html>
