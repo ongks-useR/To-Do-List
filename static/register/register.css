@@ -1,14 +1,22 @@
 body {
-    background-color: azure;
+    background-color: rgb(217, 243, 243);
     font-family: Verdana;
     font-size: 12px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 form {
     display: flex;
-    align-items: center;
-    width: 1200px;
+    justify-content: center;
+}
+
+img, #right {
+    height: 400px;
+    width: auto;
 }
 
 #register-btn,
@@ -21,8 +29,7 @@ form {
 /* LEFT */
 
 img {
-    height: 380px;
-    width: auto;
+    border-radius: 20px 0 0 20px;
 }
 
 /* RIGHT */
@@ -35,8 +42,12 @@ p {
 }
 
 #right {
-    padding: 20px 40px 40px 40px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    padding: 0 40px;
 }
 
 #right > div:nth-last-of-type(1) {
