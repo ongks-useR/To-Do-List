@@ -13,7 +13,7 @@
     {% from 'bootstrap5/form.html' import render_field %}
 </head>
 <body>
-    <form action="{{ url_for('register') }}" method="post">
+    <form action="{{ url_for('register') }}" method="post" novalidate>
         {{ form.csrf_token }}
         <div id="left">
             <img src="{{ url_for('static', filename='register/images/landscape_01.jpg') }}" alt="register as new user">
