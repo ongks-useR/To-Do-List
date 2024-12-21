@@ -57,4 +57,12 @@ p {
     font-size: 14px;
 }
 
+svg {
+    height: 35px;
+    width: 35px;
+    margin: 0 10px 0 0;
+}
 
+.user-input {
+    display: flex;
+}
