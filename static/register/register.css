@@ -57,7 +57,7 @@ p {
     font-size: 14px;
 }
 
-svg {
+.label-icon {
     height: 35px;
     width: 35px;
     margin: 0 10px 0 0;
@@ -65,4 +65,30 @@ svg {
 
 .user-input {
     display: flex;
+}
+
+#right > div:nth-last-of-type(1) > a {
+    text-decoration: none;
+    color: black;
+}
+
+#right > div:nth-last-of-type(1) > a:hover {
+    text-decoration: underline;
+}
+
+.fa-circle-info > svg,
+span {
+    height: 12px;
+    width: auto;
+    font-size: 12px;
+}
+
+.fa-circle-info {
+    margin-right: 8px;
+}
+
+span {
+    margin: 0 0 10px 45px;
+    display: flex;
+    align-items: center;
 }
